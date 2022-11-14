@@ -1,3 +1,4 @@
+import 'package:aastu/Widgets/general_inforamtion.dart';
 import 'package:flutter/material.dart';
 
 import '../Widgets/button.dart';
@@ -28,7 +29,8 @@ class Home extends StatelessWidget {
             snap: true,
             expandedHeight: MediaQuery.of(context).size.height * 0.52,
             flexibleSpace: FlexibleSpaceBar(
-              titlePadding:  EdgeInsets.only(top:MediaQuery.of(context).size.height * 0.47),
+              titlePadding: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.47),
               title: const GridTileBar(
                 backgroundColor: Colors.transparent,
                 title: Text(
@@ -49,23 +51,24 @@ class Home extends StatelessWidget {
               ),
             ),
           ),
-          buildData(),
+          buildData(context),
         ],
       ),
     );
   }
 }
 
-Widget buildData() => SliverToBoxAdapter(
+Widget buildData(BuildContext context) => SliverToBoxAdapter(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Buttonnn(
             'General Information',
             const Icon(
-              Icons.login,
+              Icons.info,
               color: Color.fromARGB(255, 2, 23, 56),
             ),
+            () => Navigator.of(context).pushNamed(GeneralInfo.routeName),
           ),
           Buttonnn(
             'Guidline',
@@ -73,6 +76,7 @@ Widget buildData() => SliverToBoxAdapter(
               Icons.login,
               color: Color.fromARGB(255, 2, 23, 56),
             ),
+            () => null,
           ),
           Buttonnn(
             'Graduated Students',
@@ -80,6 +84,7 @@ Widget buildData() => SliverToBoxAdapter(
               Icons.people,
               color: Color.fromARGB(255, 2, 23, 56),
             ),
+            () => null,
           ),
           Buttonnn(
             'aastu website',
@@ -87,6 +92,7 @@ Widget buildData() => SliverToBoxAdapter(
               Icons.web,
               color: Color.fromARGB(255, 2, 23, 56),
             ),
+            () => null,
           ),
         ],
       ),

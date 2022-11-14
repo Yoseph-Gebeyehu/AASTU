@@ -1,4 +1,6 @@
+import 'package:aastu/Screens/home.dart';
 import 'package:aastu/Widgets/button.dart';
+import 'package:aastu/Widgets/general_inforamtion.dart';
 import 'package:flutter/material.dart';
 
 class SideDrawer extends StatelessWidget {
@@ -19,6 +21,7 @@ class SideDrawer extends StatelessWidget {
             Icons.home,
             color: Color.fromARGB(255, 2, 23, 56),
           ),
+          () => Navigator.of(context).pushNamed(Home.routeName),
         ),
         Buttonnn(
           'General Information',
@@ -26,6 +29,7 @@ class SideDrawer extends StatelessWidget {
             Icons.info,
             color: Color.fromARGB(255, 2, 23, 56),
           ),
+          () => Navigator.of(context).pushNamed(GeneralInfo.routeName),
         ),
         Buttonnn(
           'Guidline',
@@ -33,6 +37,7 @@ class SideDrawer extends StatelessWidget {
             Icons.info,
             color: Color.fromARGB(255, 2, 23, 56),
           ),
+          () => null,
         ),
         Buttonnn(
           'Graduated Students',
@@ -40,6 +45,7 @@ class SideDrawer extends StatelessWidget {
             Icons.people,
             color: Color.fromARGB(255, 2, 23, 56),
           ),
+          () => null,
         ),
         Buttonnn(
           'aastu website',
@@ -47,6 +53,7 @@ class SideDrawer extends StatelessWidget {
             Icons.web,
             color: Color.fromARGB(255, 2, 23, 56),
           ),
+          () => null,
         ),
         Buttonnn(
           'LogIn',
@@ -54,6 +61,7 @@ class SideDrawer extends StatelessWidget {
             Icons.login,
             color: Color.fromARGB(255, 2, 23, 56),
           ),
+          () => null,
         ),
         Buttonnn(
           'SignUp',
@@ -61,6 +69,7 @@ class SideDrawer extends StatelessWidget {
             Icons.login,
             color: Color.fromARGB(255, 2, 23, 56),
           ),
+          () => null,
         ),
       ],
     );
