@@ -1,4 +1,5 @@
 import 'package:aastu/Widgets/button.dart';
+import 'package:aastu/Widgets/login.dart';
 import 'package:flutter/material.dart';
 
 class Guidline extends StatelessWidget {
@@ -74,7 +75,7 @@ class Guidline extends StatelessWidget {
               child: Buttonnn(
                 'Login',
                 const Icon(Icons.login),
-                () => null,
+                () => Navigator.of(context).pushNamed(LogIn.routeName),
               ),
             ),
           ],

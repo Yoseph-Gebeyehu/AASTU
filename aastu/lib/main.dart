@@ -3,6 +3,7 @@ import 'package:aastu/Screens/home.dart';
 import 'package:aastu/Widgets/button.dart';
 import 'package:aastu/Widgets/drawer.dart';
 import 'package:aastu/Screens/general_inforamtion.dart';
+import 'package:aastu/Widgets/login.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(HomePage());
@@ -19,10 +20,7 @@ class HomePage extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           backgroundColor: Color.fromARGB(255, 3, 47, 83),
           titleTextStyle: TextStyle(
-            color: Colors.white,
-            fontFamily: 'QuickSand',
-            fontSize: 20
-          ),
+              color: Colors.white, fontFamily: 'QuickSand', fontSize: 20),
         ),
         iconTheme: const IconThemeData(
           color: Colors.orange,
@@ -55,7 +53,9 @@ class HomePage extends StatelessWidget {
         GeneralInfo.routeName: (context) => GeneralInfo(),
         Home.routeName: (context) => Home(),
         Guidline.routeName: (context) => Guidline(),
+        LogIn.routeName: (context) => LogIn(),
       },
     );
   }
 }
+
