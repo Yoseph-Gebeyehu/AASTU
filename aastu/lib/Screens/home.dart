@@ -1,4 +1,5 @@
-import 'package:aastu/Widgets/general_inforamtion.dart';
+import 'package:aastu/Screens/general_inforamtion.dart';
+import 'package:aastu/Screens/guideline.dart';
 import 'package:flutter/material.dart';
 
 import '../Widgets/button.dart';
@@ -76,7 +77,7 @@ Widget buildData(BuildContext context) => SliverToBoxAdapter(
               Icons.login,
               color: Color.fromARGB(255, 2, 23, 56),
             ),
-            () => null,
+            () => Navigator.of(context).pushNamed(Guidline.routeName),
           ),
           Buttonnn(
             'Graduated Students',
@@ -87,13 +88,20 @@ Widget buildData(BuildContext context) => SliverToBoxAdapter(
             () => null,
           ),
           Buttonnn(
-            'aastu website',
-            const Icon(
-              Icons.web,
-              color: Color.fromARGB(255, 2, 23, 56),
-            ),
-            () => null,
-          ),
+              'aastu website',
+              // InkWell(
+              //   onTap: () => launchUrl(Uri.parse('https://www.google.com')),
+              //   child: Text(
+              //     'Click here',
+              //     style: TextStyle(
+              //         decoration: TextDecoration.underline, color: Colors.blue),
+              //   ),
+              // ),
+              const Icon(
+                Icons.web,
+                color: Color.fromARGB(255, 2, 23, 56),
+              ),
+              () => null),
         ],
       ),
     );

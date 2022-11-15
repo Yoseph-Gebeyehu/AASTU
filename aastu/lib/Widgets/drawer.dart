@@ -1,6 +1,7 @@
+import 'package:aastu/Screens/guideline.dart';
 import 'package:aastu/Screens/home.dart';
 import 'package:aastu/Widgets/button.dart';
-import 'package:aastu/Widgets/general_inforamtion.dart';
+import 'package:aastu/Screens/general_inforamtion.dart';
 import 'package:flutter/material.dart';
 
 class SideDrawer extends StatelessWidget {
@@ -32,12 +33,12 @@ class SideDrawer extends StatelessWidget {
           () => Navigator.of(context).pushNamed(GeneralInfo.routeName),
         ),
         Buttonnn(
-          'Guidline',
+          'Guideline',
           const Icon(
             Icons.info,
             color: Color.fromARGB(255, 2, 23, 56),
           ),
-          () => null,
+          () => Navigator.of(context).pushNamed(Guidline.routeName),
         ),
         Buttonnn(
           'Graduated Students',
