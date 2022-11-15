@@ -5,7 +5,7 @@ class Buttonnn extends StatelessWidget {
   final String title;
   final Widget icon;
   final Function()? tap;
-  Buttonnn(this.title,this.icon,this.tap);
+  Buttonnn(this.title, this.icon, this.tap);
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -17,11 +17,11 @@ class Buttonnn extends StatelessWidget {
           decoration: BoxDecoration(
             boxShadow: const [
               BoxShadow(
-                offset: Offset(0.0, 20.0),
-                blurRadius: 30.0,
-              color:  Colors.black12
-                // color: Color.fromARGB(255, 146, 89, 4),
-              ),
+                  offset: Offset(0.0, 20.0),
+                  blurRadius: 30.0,
+                  color: Colors.black12
+                  // color: Color.fromARGB(255, 146, 89, 4),
+                  ),
             ],
             color: Colors.white,
             borderRadius: BorderRadius.circular(22.0),
@@ -44,9 +44,10 @@ class Buttonnn extends StatelessWidget {
                   child: Text(
                     title,
                     style: const TextStyle(
-                        fontFamily: 'QuickSand',
-                        fontSize: 20,
-                        color: Colors.orange),
+                      fontFamily: 'QuickSand',
+                      fontSize: 20,
+                      color: Colors.orange,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                 ),

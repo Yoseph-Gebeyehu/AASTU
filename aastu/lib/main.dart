@@ -1,5 +1,6 @@
 import 'package:aastu/Screens/guideline.dart';
 import 'package:aastu/Screens/home.dart';
+import 'package:aastu/Screens/welcome.dart';
 import 'package:aastu/Widgets/button.dart';
 import 'package:aastu/Widgets/drawer.dart';
 import 'package:aastu/Screens/general_inforamtion.dart';
@@ -14,7 +15,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Home(),
+      home: Welcome(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
