@@ -1,3 +1,4 @@
+import 'package:aastu/Widgets/button.dart';
 import 'package:flutter/material.dart';
 
 class Guidline extends StatelessWidget {
@@ -67,7 +68,15 @@ class Guidline extends StatelessWidget {
    Remember what you fill in the biography form.''',
                 style: Theme.of(context).textTheme.headline1,
               ),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Buttonnn(
+                'Login',
+                const Icon(Icons.login),
+                () => null,
+              ),
+            ),
           ],
         ),
       ),
