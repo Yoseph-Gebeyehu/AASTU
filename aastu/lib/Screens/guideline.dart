@@ -1,5 +1,5 @@
 import 'package:aastu/Widgets/button.dart';
-import 'package:aastu/Widgets/login.dart';
+import 'package:aastu/Screens/login.dart';
 import 'package:flutter/material.dart';
 
 import '../Widgets/drawer.dart';
