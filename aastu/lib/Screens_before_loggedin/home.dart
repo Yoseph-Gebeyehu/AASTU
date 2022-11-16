@@ -17,7 +17,12 @@ class Home extends StatelessWidget {
         slivers: [
           SliverAppBar(
             elevation: 15,
+            shadowColor: Colors.black,
             centerTitle: true,
+            leading: Image.asset('Assets/Images/AASTU_LOGO.png'),
+            actions: [
+              Image.asset('Assets/Images/AASTU_LOGO.png'),
+            ],
             title: Text('Home page'),
             // backgroundColor: const Color.fromARGB(255, 182, 111, 5),
             iconTheme:

@@ -1,3 +1,4 @@
+import 'package:aastu/Screens_after_loggedin/list_of_services.dart';
 import 'package:flutter/material.dart';
 
 import '../Widgets/drawer.dart';
@@ -112,7 +113,7 @@ Widget form(BuildContext context) => SliverToBoxAdapter(
                       // side: const BorderSide(
                       //     color: Color.fromARGB(255, 4, 91, 163))
                     ),
-                    onPressed: () {},
+                    onPressed: () => Navigator.of(context).pushReplacementNamed(ListOfServices.routeName),
                     child: Text(
                       "Login".toUpperCase(),
                       style: const TextStyle(
