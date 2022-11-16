@@ -56,11 +56,7 @@ class ListOfServices extends StatelessWidget {
               const Icon(Icons.home),
               null,
             ),
-            Buttonnn(
-              'Graduated Students',
-              const Icon(Icons.school),
-              null,
-            ),
+            
             Buttonnn(
               'aastu website',
               const Icon(Icons.web),

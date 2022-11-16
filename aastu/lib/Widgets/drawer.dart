@@ -31,7 +31,8 @@ class SideDrawer extends StatelessWidget {
             Icons.info,
             color: Color.fromARGB(255, 2, 23, 56),
           ),
-          () => Navigator.of(context).pushReplacementNamed(GeneralInfo.routeName),
+          () =>
+              Navigator.of(context).pushReplacementNamed(GeneralInfo.routeName),
         ),
         Buttonnn(
           'Guideline',
@@ -48,22 +49,6 @@ class SideDrawer extends StatelessWidget {
             color: Color.fromARGB(255, 2, 23, 56),
           ),
           () => Navigator.of(context).pushReplacementNamed(LogIn.routeName),
-        ),
-        Buttonnn(
-          'SignUp',
-          const Icon(
-            Icons.login,
-            color: Color.fromARGB(255, 2, 23, 56),
-          ),
-          () => null,
-        ),
-        Buttonnn(
-          'Graduated Students',
-          const Icon(
-            Icons.people,
-            color: Color.fromARGB(255, 2, 23, 56),
-          ),
-          () => null,
         ),
         Buttonnn(
           'aastu website',
