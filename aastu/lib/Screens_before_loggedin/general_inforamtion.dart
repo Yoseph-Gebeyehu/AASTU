@@ -1,4 +1,4 @@
-import 'package:aastu/Screens/home.dart';
+import 'package:aastu/Screens_before_loggedin/home.dart';
 import 'package:aastu/Widgets/drawer.dart';
 import 'package:flutter/material.dart';
 

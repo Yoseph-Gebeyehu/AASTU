@@ -1,10 +1,10 @@
-import 'package:aastu/Screens/guideline.dart';
-import 'package:aastu/Screens/home.dart';
-import 'package:aastu/Screens/welcome.dart';
+import 'package:aastu/Screens_before_loggedin/guideline.dart';
+import 'package:aastu/Screens_before_loggedin/home.dart';
+import 'package:aastu/Screens_before_loggedin/welcome.dart';
 import 'package:aastu/Widgets/button.dart';
 import 'package:aastu/Widgets/drawer.dart';
-import 'package:aastu/Screens/general_inforamtion.dart';
-import 'package:aastu/Screens/login.dart';
+import 'package:aastu/Screens_before_loggedin/general_inforamtion.dart';
+import 'package:aastu/Screens_before_loggedin/login.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(HomePage());

@@ -1,5 +1,5 @@
-import 'package:aastu/Screens/general_inforamtion.dart';
-import 'package:aastu/Screens/guideline.dart';
+import 'package:aastu/Screens_before_loggedin/general_inforamtion.dart';
+import 'package:aastu/Screens_before_loggedin/guideline.dart';
 import 'package:flutter/material.dart';
 
 import '../Widgets/button.dart';
