@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 
+import 'drawer.dart';
+
 class LogIn extends StatelessWidget {
   const LogIn({Key? key}) : super(key: key);
   static const routeName = '/log-in';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        width: MediaQuery.of(context).size.width * 0.8,
+        backgroundColor: Colors.white30,
+        child: const SideDrawer(),
+      ),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -47,6 +54,7 @@ Widget form(BuildContext context) => SliverToBoxAdapter(
               child: TextFormField(
                 keyboardType: TextInputType.name,
                 textInputAction: TextInputAction.next,
+                style: Theme.of(context).textTheme.headline1,
                 cursorColor: Color.fromARGB(255, 3, 40, 100),
                 onSaved: (email) {},
                 decoration: InputDecoration(
@@ -69,6 +77,8 @@ Widget form(BuildContext context) => SliverToBoxAdapter(
               child: TextFormField(
                 textInputAction: TextInputAction.done,
                 obscureText: true,
+                // expands: ,
+                style: Theme.of(context).textTheme.headline1,
                 cursorColor: Colors.blue,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(

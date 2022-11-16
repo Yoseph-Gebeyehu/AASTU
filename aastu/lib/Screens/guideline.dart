@@ -2,6 +2,8 @@ import 'package:aastu/Widgets/button.dart';
 import 'package:aastu/Widgets/login.dart';
 import 'package:flutter/material.dart';
 
+import '../Widgets/drawer.dart';
+
 class Guidline extends StatelessWidget {
   const Guidline({Key? key}) : super(key: key);
   static const routeName = '/guideline';
@@ -9,15 +11,12 @@ class Guidline extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        width: MediaQuery.of(context).size.width * 0.8,
+        backgroundColor: Colors.white30,
+        child: const SideDrawer(),
+      ),
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: const Icon(
-            Icons.arrow_back,
-          ),
-        ),
         title: const Text('LogIn Guidline'),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
@@ -75,7 +74,8 @@ class Guidline extends StatelessWidget {
               child: Buttonnn(
                 'Login',
                 const Icon(Icons.login),
-                () => Navigator.of(context).pushNamed(LogIn.routeName),
+                () =>
+                    Navigator.of(context).pushReplacementNamed(LogIn.routeName),
               ),
             ),
           ],

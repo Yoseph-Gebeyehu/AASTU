@@ -13,7 +13,6 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -68,7 +67,8 @@ Widget buildData(BuildContext context) => SliverToBoxAdapter(
                 Icons.info,
                 color: Color.fromARGB(255, 2, 23, 56),
               ),
-              () => Navigator.of(context).pushNamed(GeneralInfo.routeName),
+              () => Navigator.of(context)
+                  .pushReplacementNamed(GeneralInfo.routeName),
             ),
             Buttonnn(
               'Guideline to LogIn',
@@ -76,7 +76,8 @@ Widget buildData(BuildContext context) => SliverToBoxAdapter(
                 Icons.info,
                 color: Color.fromARGB(255, 2, 23, 56),
               ),
-              () => Navigator.of(context).pushNamed(Guidline.routeName),
+              () => Navigator.of(context)
+                  .pushReplacementNamed(Guidline.routeName),
             ),
             Buttonnn(
               'LogIn',
@@ -84,7 +85,7 @@ Widget buildData(BuildContext context) => SliverToBoxAdapter(
                 Icons.login,
                 color: Color.fromARGB(255, 2, 23, 56),
               ),
-              () => Navigator.of(context).pushNamed(LogIn.routeName),
+              () => Navigator.of(context).pushReplacementNamed(LogIn.routeName),
             ),
             Buttonnn(
               'SignUp',

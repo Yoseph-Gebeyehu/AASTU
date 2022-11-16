@@ -21,12 +21,12 @@ class GeneralInfo extends StatelessWidget {
           style: TextStyle(color: Colors.white,fontSize: 20,fontFamily: 'QuickSand'),
         ),
         backgroundColor: const Color.fromARGB(255, 3, 47, 83),
-        leading: IconButton(
-          onPressed: (() => Navigator.of(context).pop()),
-          icon: const Icon(
-            Icons.arrow_back,
-          ),
-        ),
+        // leading: IconButton(
+        //   onPressed: (() => Navigator.of(context).pop()),
+        //   icon: const Icon(
+        //     Icons.arrow_back,
+        //   ),
+        // ),
         // iconTheme: IconThemeData(color: const Color.fromARGB(255, 182, 111, 5)),
       ),
       body: Center(

@@ -44,6 +44,6 @@ Widget button(BuildContext context) => SliverToBoxAdapter(
       child: Buttonnn(
         'Go to home',
         const Icon(Icons.home),
-        () => Navigator.of(context).pushNamed(Home.routeName),
+        () => Navigator.of(context).pushReplacementNamed(Home.routeName),
       ),
     );
