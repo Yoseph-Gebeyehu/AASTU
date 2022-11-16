@@ -1,3 +1,4 @@
+import 'package:aastu/Screens_after_loggedin/my_course.dart';
 import 'package:aastu/Screens_before_loggedin/login.dart';
 import 'package:aastu/Widgets/button.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,6 @@ class ListOfServices extends StatelessWidget {
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
         actions: [
-
           TextButton(
             // style: ButtonStyle(),
             onPressed: () =>
@@ -39,7 +39,7 @@ class ListOfServices extends StatelessWidget {
             Buttonnn(
               'My Course',
               const Icon(Icons.person),
-              null,
+              () => Navigator.of(context).pushNamed(MyCourse.routeName),
             ),
             Buttonnn(
               'My Status',

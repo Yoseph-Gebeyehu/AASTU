@@ -42,8 +42,8 @@ class Welcome extends StatelessWidget {
 
 Widget button(BuildContext context) => SliverToBoxAdapter(
       child: Buttonnn(
-        'Go to home',
-        const Icon(Icons.home),
+        'Start here',
+        const Icon(Icons.start),
         () => Navigator.of(context).pushReplacementNamed(Home.routeName),
       ),
     );
