@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'drawer.dart';
 
 class LogIn extends StatelessWidget {
-  const LogIn({Key? key}) : super(key: key);
+  // const LogIn({Key? key}) : super(key: key);
   static const routeName = '/log-in';
   @override
   Widget build(BuildContext context) {
@@ -79,18 +79,19 @@ Widget form(BuildContext context) => SliverToBoxAdapter(
                 obscureText: true,
                 // expands: ,
                 style: Theme.of(context).textTheme.headline1,
-                cursorColor: Colors.blue,
+                cursorColor: const Color.fromARGB(255, 5, 50, 122),
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
                   hintText: "Password",
-                  prefixIcon: const Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Icon(
-                      Icons.lock,
-                      color: Color.fromARGB(255, 5, 50, 122),
-                    ),
+                  prefixIcon: const Icon(
+                    Icons.lock,
+                    color: Color.fromARGB(255, 5, 50, 122),
+                  ),
+                  suffixIcon: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.password),
                   ),
                 ),
               ),
