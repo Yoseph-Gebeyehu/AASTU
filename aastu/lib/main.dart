@@ -1,5 +1,6 @@
 import 'package:aastu/Screens_after_loggedin/list_of_services.dart';
 import 'package:aastu/Screens_after_loggedin/my_course.dart';
+import 'package:aastu/Screens_after_loggedin/my_status.dart';
 import 'package:aastu/Screens_before_loggedin/guideline.dart';
 import 'package:aastu/Screens_before_loggedin/home.dart';
 import 'package:aastu/Screens_before_loggedin/welcome.dart';
@@ -69,6 +70,7 @@ class HomePage extends StatelessWidget {
         ThirdYear.routeName: (context) => ThirdYear(),
         FourthYear.routeName: (context) => FourthYear(),
         FifthYear.routeName: (context) => FifthYear(),
+        MyStatus.routeName : (context)=> MyStatus(),
       },
     );
   }

@@ -1,13 +1,17 @@
-import 'package:aastu/Screens_before_loggedin/login.dart';
-import 'package:aastu/Widgets/my_course_widgets.dart';
+import 'package:aastu/Widgets/my_status_widget.dart';
 import 'package:aastu/courses_by_years.dart/1st_year.dart';
 import 'package:aastu/courses_by_years.dart/2nd_year.dart';
 import 'package:aastu/courses_by_years.dart/3rd_year.dart';
 import 'package:aastu/courses_by_years.dart/4th_year.dart';
+import 'package:aastu/status_by_year/fifth_year.dart';
+import 'package:aastu/status_by_year/first_year.dart';
+import 'package:aastu/status_by_year/fourth_year.dart';
+import 'package:aastu/status_by_year/second_year.dart';
+import 'package:aastu/status_by_year/third_year.dart';
 import 'package:flutter/material.dart';
 
-class MyCourse extends StatelessWidget {
-  static const routeName = '/my-course';
+class MyStatus extends StatelessWidget {
+  static const routeName = '/my-status';
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 5,
@@ -16,7 +20,7 @@ class MyCourse extends StatelessWidget {
           floatHeaderSlivers: true,
           headerSliverBuilder: ((context, innerBoxIsScrolled) => const [
                 SliverAppBar(
-                  title: Text('My Courses'),
+                  title: Text('My Status'),
                   floating: true,
                   snap: true,
                   pinned: true,
@@ -40,14 +44,14 @@ class MyCourse extends StatelessWidget {
                   ),
                 )
               ]),
-          body: Column(children: const [
+          body: Column(children: [
             Expanded(
               child: TabBarView(children: [
-                FirstYear(),
-                SecondYear(),
-                ThirdYear(),
-                FourthYear(),
-                FirstYear(),
+                Tab(child: FirstYearStatus()),
+                Tab(child: SecondYearStatus()),
+                Tab(child: ThirdYearStatus()),
+                Tab(child: FourthYearStatus()),
+                Tab(child: FifthYearStatus()),
               ]),
             )
           ]),

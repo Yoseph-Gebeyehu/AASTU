@@ -1,4 +1,5 @@
 import 'package:aastu/Screens_after_loggedin/my_course.dart';
+import 'package:aastu/Screens_after_loggedin/my_status.dart';
 import 'package:aastu/Screens_before_loggedin/login.dart';
 import 'package:aastu/Widgets/button.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +45,7 @@ class ListOfServices extends StatelessWidget {
             Buttonnn(
               'My Status',
               const Icon(Icons.person),
-              null,
+              ()=> Navigator.of(context).pushNamed(MyStatus.routeName),
             ),
             Buttonnn(
               'My Grade',
