@@ -20,6 +20,7 @@ class FirstYear extends StatelessWidget {
           child: MyCourseWidget(
             courseName: 'General Psychology',
             courseCode: 'GePsy001',
+            
           ),
         ),
         Tab(

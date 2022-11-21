@@ -32,56 +32,109 @@ class MyStatusWidget extends StatelessWidget {
 // /MyStatusWidget
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          '1st Semster',
-          style: Theme.of(context).textTheme.headline3,
-          textAlign: TextAlign.center,
-        ),
-        Text(
-          'Acadamic year:- $accadamic_year',
-          style: Theme.of(context).textTheme.headline1,
-        ),
-        Text(
-          'Year/Batch:- $year_batch',
-          style: Theme.of(context).textTheme.headline1,
-        ),
-        Text(
-          'Semester:- $semester',
-          style: Theme.of(context).textTheme.headline1,
-        ),
-        Text(
-          'Registration Date:- $registraion_date',
-          style: Theme.of(context).textTheme.headline1,
-        ),
-        Text(
-          'Remark:- $remark',
-          style: Theme.of(context).textTheme.headline1,
-        ),
-        Text(
-          'Registraion type:- $registration_type',
-          style: Theme.of(context).textTheme.headline1,
-        ),
-        Text(
-          'Semster GPA:- $semester_gpa',
-          style: Theme.of(context).textTheme.headline1,
-        ),
-        Text(
-          'Commulative GPA:- $cummulative_gpa',
-          style: Theme.of(context).textTheme.headline1,
-        ),
-        Text(
-          'Prvious Status:- $previous_status',
-          style: Theme.of(context).textTheme.headline1,
-        ),
-        Text(
-          'Final Status:- $final_status',
-          style: Theme.of(context).textTheme.headline1,
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Center(
+            child: Text(
+              '1st Semster',
+              style: Theme.of(context).textTheme.headline3,
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Text(
+            'Acadamic year:- $accadamic_year',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Year/Batch:- $year_batch',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Semester:- $semester',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Registration Date:- $registraion_date',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Remark:- $remark',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Registraion type:- $registration_type',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Semster GPA:- $semester_gpa',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Commulative GPA:- $cummulative_gpa',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Prvious Status:- $previous_status',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Final Status:- $final_status',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          const SizedBox(height: 20),
+          Center(
+            child: Text(
+              '2nd Semster',
+              style: Theme.of(context).textTheme.headline3,
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Text(
+            'Acadamic year:- $accadamic_year',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Year/Batch:- $year_batch',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Semester:- $semester',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Registration Date:- $registraion_date',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Remark:- $remark',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Registraion type:- $registration_type',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Semster GPA:- $semester_gpa',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Commulative GPA:- $cummulative_gpa',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Prvious Status:- $previous_status',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          Text(
+            'Final Status:- $final_status',
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          const SizedBox(height: 20),
+        ],
+      ),
     );
   }
 }

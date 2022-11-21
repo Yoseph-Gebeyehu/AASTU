@@ -44,7 +44,7 @@ class MyStatus extends StatelessWidget {
                   ),
                 )
               ]),
-          body: Column(children: [
+          body: Column(children: const [
             Expanded(
               child: TabBarView(children: [
                 Tab(child: FirstYearStatus()),
@@ -60,3 +60,4 @@ class MyStatus extends StatelessWidget {
     );
   }
 }
+

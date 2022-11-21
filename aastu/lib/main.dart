@@ -1,5 +1,7 @@
 import 'package:aastu/Screens_after_loggedin/list_of_services.dart';
 import 'package:aastu/Screens_after_loggedin/my_course.dart';
+import 'package:aastu/Screens_after_loggedin/my_dormitory.dart';
+// import 'package:aastu/Screens_after_loggedin/my_gread.dart';
 import 'package:aastu/Screens_after_loggedin/my_status.dart';
 import 'package:aastu/Screens_before_loggedin/guideline.dart';
 import 'package:aastu/Screens_before_loggedin/home.dart';
@@ -14,6 +16,8 @@ import 'package:aastu/courses_by_years.dart/3rd_year.dart';
 import 'package:aastu/courses_by_years.dart/4th_year.dart';
 import 'package:aastu/courses_by_years.dart/5th_year.dart';
 import 'package:flutter/material.dart';
+
+import 'Screens_after_loggedin/my_grade.dart';
 
 void main() => runApp(HomePage());
 
@@ -71,6 +75,8 @@ class HomePage extends StatelessWidget {
         FourthYear.routeName: (context) => FourthYear(),
         FifthYear.routeName: (context) => FifthYear(),
         MyStatus.routeName : (context)=> MyStatus(),
+        MyGrade.routeName : (context)=> MyGrade(),
+        MyDormitory.routeName: (context)=>MyDormitory(),
       },
     );
   }

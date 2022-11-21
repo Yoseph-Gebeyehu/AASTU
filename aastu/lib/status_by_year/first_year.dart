@@ -6,7 +6,7 @@ class FirstYearStatus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MyStatusWidget(
+    return const MyStatusWidget(
       accadamic_year: '2000',
       year_batch: '2',
       semester: '1',

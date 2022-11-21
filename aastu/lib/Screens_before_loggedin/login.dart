@@ -101,25 +101,31 @@ Widget form(BuildContext context) => SliverToBoxAdapter(
             Hero(
               tag: "login_btn",
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(50),
+                borderRadius: BorderRadius.circular(20),
+                clipBehavior: Clip.antiAlias,
                 child: Container(
                   color: Colors.orange,
                   width: MediaQuery.of(context).size.width * 0.9,
                   height: MediaQuery.of(context).size.height * 0.09,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                      // shadowColor: Colors.black,
+
                       primary: Color.fromARGB(255, 173, 105, 3),
+                      // side: BorderSide(color: Colors.black,width: 5)
                       // primary: const Color.fromARGB(255, 2, 23, 56),
                       // side: const BorderSide(
                       //     color: Color.fromARGB(255, 4, 91, 163))
                     ),
-                    onPressed: () => Navigator.of(context).pushReplacementNamed(ListOfServices.routeName),
+                    onPressed: () => Navigator.of(context)
+                        .pushReplacementNamed(ListOfServices.routeName),
                     child: Text(
                       "Login".toUpperCase(),
                       style: const TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'QuickSand',
-                          fontSize: 20),
+                        color: Colors.white,
+                        fontFamily: 'QuickSand',
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                 ),
