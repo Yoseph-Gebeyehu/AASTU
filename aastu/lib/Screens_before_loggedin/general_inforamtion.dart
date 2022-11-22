@@ -1,5 +1,5 @@
-import 'package:aastu/Screens_before_loggedin/home.dart';
-import 'package:aastu/Widgets/drawer.dart';
+// import 'package:aastu/Screens_before_loggedin/home.dart';
+// import 'package:aastu/Widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 class GeneralInfo extends StatelessWidget {
@@ -10,11 +10,11 @@ class GeneralInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        width: MediaQuery.of(context).size.width * 0.8,
-        backgroundColor: Colors.white30,
-        child: const SideDrawer(),
-      ),
+      // drawer: Drawer(
+      //   width: MediaQuery.of(context).size.width * 0.8,
+      //   backgroundColor: Colors.white30,
+      //   child: const SideDrawer(),
+      // ),
       appBar: AppBar(
         title: const Text(
           'General Information',

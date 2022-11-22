@@ -11,11 +11,11 @@ class Guidline extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        width: MediaQuery.of(context).size.width * 0.8,
-        backgroundColor: Colors.white30,
-        child: const SideDrawer(),
-      ),
+      // drawer: Drawer(
+      //   width: MediaQuery.of(context).size.width * 0.8,
+      //   backgroundColor: Colors.white30,
+      //   child: const SideDrawer(),
+      // ),
       appBar: AppBar(
         title: const Text('LogIn Guidline'),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,

@@ -54,13 +54,13 @@ class ListOfServices extends StatelessWidget {
             Buttonnn(
               'My Grade',
               const Icon(Icons.grade_outlined),
-              ()=> Navigator.of(context).pushNamed(MyGrade.routeName),
+              () => Navigator.of(context).pushNamed(MyGrade.routeName),
               // null,
             ),
             Buttonnn(
               'My Dormitory',
               const Icon(Icons.home),
-              ()=> Navigator.of(context).pushNamed(MyDormitory.routeName),
+              () => Navigator.of(context).pushNamed(MyDormitory.routeName),
             ),
             Buttonnn(
               'aastu website',

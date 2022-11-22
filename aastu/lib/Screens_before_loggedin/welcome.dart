@@ -19,12 +19,17 @@ class Welcome extends StatelessWidget {
           pinned: true,
           snap: true,
           expandedHeight: MediaQuery.of(context).size.height * 0.8,
+
           flexibleSpace: FlexibleSpaceBar(
+            titlePadding: EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(context).size.width * 0.1,
+                vertical: MediaQuery.of(context).size.width * 0.05),
             title: const Text(
-              '''Welcome to AASTU Online Student Information Portal''',
+              '''Welcome to AASTU Online 
+Student Information Portal''',
               style: TextStyle(
                 fontFamily: 'QuickSand',
-                fontSize: 15,
+                fontSize: 12,
                 color: Color.fromARGB(255, 2, 23, 56),
               ),
             ),

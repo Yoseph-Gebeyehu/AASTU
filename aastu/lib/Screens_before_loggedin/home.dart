@@ -23,7 +23,7 @@ class Home extends StatelessWidget {
             actions: [
               Image.asset('Assets/Images/AASTU_LOGO.png'),
             ],
-            title: Text('Home page'),
+            title:const Text('Home page'),
             // backgroundColor: const Color.fromARGB(255, 182, 111, 5),
             iconTheme:
                 const IconThemeData(color: Color.fromARGB(255, 156, 112, 7)),
@@ -73,7 +73,7 @@ Widget buildData(BuildContext context) => SliverToBoxAdapter(
                 color: Color.fromARGB(255, 2, 23, 56),
               ),
               () => Navigator.of(context)
-                  .pushReplacementNamed(GeneralInfo.routeName),
+                  .pushNamed(GeneralInfo.routeName),
             ),
             Buttonnn(
               'Guideline to LogIn',
@@ -82,7 +82,7 @@ Widget buildData(BuildContext context) => SliverToBoxAdapter(
                 color: Color.fromARGB(255, 2, 23, 56),
               ),
               () => Navigator.of(context)
-                  .pushReplacementNamed(Guidline.routeName),
+                  .pushNamed(Guidline.routeName),
             ),
             Buttonnn(
               'LogIn',
