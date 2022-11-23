@@ -188,7 +188,7 @@ Plese check the Guideline section!''',
                                   ),
                                 ),
                                 TextButton(
-                                  onPressed: () => Navigator.of(context).pushNamed(Guidline.routeName),
+                                  onPressed: () => Navigator.of(context).pop(),
                                   child: const Text(
                                     'Cancel',
                                     style:
