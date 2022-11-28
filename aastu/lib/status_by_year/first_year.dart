@@ -7,16 +7,16 @@ class FirstYearStatus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MyStatusWidget(
-      accadamic_year: '2000',
-      year_batch: '2',
+      accadamicYear: '2000',
+      yearBatch: '2',
       semester: '1',
-      registraion_date: 'June 2002',
+      registraionDate: 'June 2002',
       remark: 'Nothing',
-      registration_type: 'Normal Load',
-      semester_gpa: '3.4',
-      cummulative_gpa: '3.3',
-      previous_status: 'pass',
-      final_status: 'pass',
+      registrationType: 'Normal Load',
+      semesterGpa: '3.4',
+      cummulativeGgpa: '3.3',
+      previousStatus: 'pass',
+      finalStatus: 'pass',
     );
   }
 }
