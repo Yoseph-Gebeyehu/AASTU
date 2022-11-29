@@ -4,31 +4,57 @@ class TableScreen extends StatelessWidget {
   const TableScreen({Key? key}) : super(key: key);
   static const routeName = '/table-screen';
 
-  Widget padding(BuildContext context, String text) {
-    return Padding(
-      padding: EdgeInsets.only(
-        top: MediaQuery.of(context).size.height * 0.015,
-        bottom: MediaQuery.of(context).size.height * 0.005,
-      ),
-      child: Text(
-        text,
-        style: Theme.of(context).textTheme.headline1,
-        textAlign: TextAlign.center,
-      ),
+  TableRow tableRow(BuildContext context, String text1, String text2) {
+    return TableRow(
+      children: [
+        Padding(
+          padding: EdgeInsets.only(
+            top: MediaQuery.of(context).size.height * 0.015,
+            bottom: MediaQuery.of(context).size.height * 0.005,
+          ),
+          child: Text(
+            text1,
+            style: Theme.of(context).textTheme.headline1,
+            textAlign: TextAlign.center,
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+            top: MediaQuery.of(context).size.height * 0.015,
+            bottom: MediaQuery.of(context).size.height * 0.005,
+          ),
+          child: Text(
+            text2,
+            style: Theme.of(context).textTheme.headline1,
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ],
     );
   }
 
-  Widget paddingOfSemester(BuildContext context, String text) {
-    return Padding(
-      padding: EdgeInsets.only(
-        top: MediaQuery.of(context).size.height * 0.02,
-        bottom: MediaQuery.of(context).size.height * 0.01,
-      ),
-      child: Text(
-        text,
-        style: Theme.of(context).textTheme.headline2,
-        textAlign: TextAlign.center,
-      ),
+  TableRow tabelOfSemester(BuildContext context, String text) {
+    return TableRow(
+      children: [
+        Padding(
+          padding: EdgeInsets.only(
+            top: MediaQuery.of(context).size.height * 0.02,
+            bottom: MediaQuery.of(context).size.height * 0.01,
+          ),
+          child: Text(
+            text,
+            style: Theme.of(context).textTheme.headline2,
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ],
+    );
+  }
+
+  TableBorder tableBorder() {
+    return TableBorder.all(
+      color: const Color.fromARGB(255, 6, 76, 134),
+      width: 0.2,
     );
   }
 
@@ -44,70 +70,32 @@ class TableScreen extends StatelessWidget {
         scrollDirection: Axis.vertical,
         children: [
           Table(
-            border: TableBorder.all(
-              color: const Color.fromARGB(255, 6, 76, 134),
-              width: 0.2,
-            ),
+            border: tableBorder(),
             children: [
-              TableRow(
-                children: [
-                  padding(context, '1st Semester'),
-                ],
-              ),
+              tabelOfSemester(context, '1st Semester'),
             ],
           ),
           Table(
-            border: TableBorder.all(
-              color: const Color.fromARGB(255, 6, 76, 134),
-              width: 0.2,
-            ),
+            border: tableBorder(),
             children: [
-              TableRow(
-                children: [
-                  padding(context, 'SGPA'),
-                  padding(context, '3.5'),
-                ],
-              ),
-              TableRow(
-                children: [
-                  padding(context, 'CPGA'),
-                  padding(context, '3.5'),
-                ],
-              ),
+              tableRow(context, 'SGPA', '3.5'),
+              tableRow(context, 'CGPA', '3.3'),
             ],
           ),
           const SizedBox(
             height: 35,
           ),
           Table(
-            border: TableBorder.all(
-              color: const Color.fromARGB(255, 6, 76, 134),
-              width: 0.2,
-            ),
+            border: tableBorder(),
             children: [
-              TableRow(children: [
-                padding(context, '2nd Semester'),
-              ]),
+              tabelOfSemester(context, '2nd Semester'),
             ],
           ),
           Table(
-            border: TableBorder.all(
-              color: const Color.fromARGB(255, 6, 76, 134),
-              width: 0.2,
-            ),
+            border: tableBorder(),
             children: [
-              TableRow(
-                children: [
-                  padding(context, 'SPGA'),
-                  padding(context, '3.6'),
-                ],
-              ),
-              TableRow(
-                children: [
-                  padding(context, 'CGPA'),
-                  padding(context, '3.3'),
-                ],
-              ),
+              tableRow(context, 'SGPA', '3.5'),
+              tableRow(context, 'CGPA', '3.3'),
             ],
           ),
         ],

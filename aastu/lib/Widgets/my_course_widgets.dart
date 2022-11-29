@@ -5,19 +5,18 @@ class MyCourseWidget extends StatelessWidget {
 
   var courseCode;
   final String courseName;
-  var grade ;
-  MyCourseWidget({required this.courseName, @required this.courseCode, this.grade = ""});
+  var grade;
+  MyCourseWidget(
+      {required this.courseName, @required this.courseCode, this.grade = ""});
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       subtitle: Text(
-        // 'Subject Code:- ' + courseCode,
-        '''Subject Code:- ${courseCode}''',
+        '''Subject Code:- $courseCode''',
         style: const TextStyle(fontFamily: 'QuickSand', fontSize: 15),
       ),
       horizontalTitleGap: 0,
-      // contentPadding: EdgeInsets.all(0),
       leading: const Icon(
         Icons.star,
         color: Color.fromARGB(255, 3, 47, 83),

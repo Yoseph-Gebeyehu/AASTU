@@ -5,6 +5,11 @@ import '../Widgets/my_course_widgets.dart';
 class FifthYear extends StatelessWidget {
   const FifthYear({Key? key}) : super(key: key);
   static const routeName = '/fifth-year';
+  Tab tab(String name, String code) {
+    return Tab(
+      child: MyCourseWidget(courseName: name, courseCode: code),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,36 +21,11 @@ class FifthYear extends StatelessWidget {
           style: Theme.of(context).textTheme.headline3,
           textAlign: TextAlign.center,
         ),
-        Tab(
-          child: MyCourseWidget(
-            courseName: 'General Psychology',
-            courseCode: 'GePsy001',
-          ),
-        ),
-        Tab(
-          child: MyCourseWidget(
-            courseName: 'Anthropology',
-            courseCode: 'Anth002',
-          ),
-        ),
-        Tab(
-          child: MyCourseWidget(
-            courseName: 'Global Trend',
-            courseCode: 'Glo003',
-          ),
-        ),
-        Tab(
-          child: MyCourseWidget(
-            courseName: 'English',
-            courseCode: 'Eng004',
-          ),
-        ),
-        Tab(
-          child: MyCourseWidget(
-            courseName: 'Maths',
-            courseCode: 'Mat005',
-          ),
-        ),
+        tab('General Psychology', 'GePsy001'),
+        tab('Anthropology', 'Anth002'),
+        tab('Global Trend', 'Glo003'),
+        tab('English', 'Eng004'),
+        tab('Maths', 'Mat005'),
         Padding(
           padding: const EdgeInsets.only(top: 50),
           child: Text(
@@ -54,36 +34,12 @@ class FifthYear extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-        Tab(
-          child: MyCourseWidget(
-            courseName: 'General Psychology',
-            courseCode: 'GePsy001',
-          ),
-        ),
-        Tab(
-          child: MyCourseWidget(
-            courseName: 'Anthropology',
-            courseCode: 'Anth002',
-          ),
-        ),
-        Tab(
-          child: MyCourseWidget(
-            courseName: 'Global Trend',
-            courseCode: 'Glo003',
-          ),
-        ),
-        Tab(
-          child: MyCourseWidget(
-            courseName: 'English',
-            courseCode: 'Eng004',
-          ),
-        ),
-        Tab(
-          child: MyCourseWidget(
-            courseName: 'Maths',
-            courseCode: 'Mat005',
-          ),
-        ),
+        tab('General Psychology', 'GePsy001'),
+        tab('Anthropology', 'Anth002'),
+        tab('Global Trend', 'Glo003'),
+        tab('English', 'Eng004'),
+        tab('Maths', 'Mat005'),
+        const SizedBox(height: 40),
       ],
     );
   }

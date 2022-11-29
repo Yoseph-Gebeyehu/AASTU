@@ -1,15 +1,10 @@
-import 'dart:ffi';
-
 import 'package:aastu/Screens_after_loggedin/list_of_services.dart';
-import 'package:aastu/Screens_before_loggedin/alert_dialog.dart';
 import 'package:aastu/Screens_before_loggedin/guideline.dart';
-import 'package:aastu/Screens_before_loggedin/home.dart';
 import 'package:flutter/material.dart';
 
 import '../Widgets/drawer.dart';
 
 class LogIn extends StatefulWidget {
-  // const LogIn({Key? key}) : super(key: key);
   static const routeName = '/log-in';
 
   @override
@@ -92,7 +87,7 @@ Widget form(
                 keyboardType: TextInputType.name,
                 textInputAction: TextInputAction.next,
                 style: Theme.of(context).textTheme.headline1,
-                cursorColor: Color.fromARGB(255, 3, 40, 100),
+                cursorColor: const Color.fromARGB(255, 3, 40, 100),
                 onSaved: (email) {},
                 controller: userNameController,
                 decoration: InputDecoration(
@@ -149,13 +144,7 @@ Widget form(
                   height: MediaQuery.of(context).size.height * 0.09,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      // shadowColor: Colors.black,
-
-                      primary: Color.fromARGB(255, 173, 105, 3),
-                      // side: BorderSide(color: Colors.black,width: 5)
-                      // primary: const Color.fromARGB(255, 2, 23, 56),
-                      // side: const BorderSide(
-                      //     color: Color.fromARGB(255, 4, 91, 163))
+                      primary: const Color.fromARGB(255, 173, 105, 3),
                     ),
                     onPressed: () => userNameController.text ==
                                 "Yoseph Gebeyehu" &&
@@ -179,21 +168,24 @@ Plese check the Guideline section!''',
                               ),
                               actions: [
                                 TextButton(
-                                  onPressed: () => Navigator.of(context).pushNamed(Guidline.routeName),
+                                  onPressed: () => Navigator.of(context)
+                                      .pushNamed(Guidline.routeName),
                                   child: const Text(
                                     'Guideline',
-                                    style:
-                                        TextStyle(color: Colors.orange,fontSize: 17,fontFamily: 'QuickSand'),
-
+                                    style: TextStyle(
+                                        color: Colors.orange,
+                                        fontSize: 17,
+                                        fontFamily: 'QuickSand'),
                                   ),
                                 ),
                                 TextButton(
                                   onPressed: () => Navigator.of(context).pop(),
                                   child: const Text(
                                     'Cancel',
-                                    style:
-                                        TextStyle(color: Colors.orange,fontSize: 17,fontFamily: 'QuickSand'),
-
+                                    style: TextStyle(
+                                        color: Colors.orange,
+                                        fontSize: 17,
+                                        fontFamily: 'QuickSand'),
                                   ),
                                 ),
                               ],

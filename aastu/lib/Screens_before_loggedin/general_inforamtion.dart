@@ -7,33 +7,32 @@ class GeneralInfo extends StatelessWidget {
 
   static const routeName = '/general-info';
 
+  ListTile listTile(BuildContext context, String text) {
+    return ListTile(
+      iconColor: Theme.of(context).iconTheme.color,
+      leading: const Icon(Icons.star),
+      title: Text(
+        text,
+        style: Theme.of(context).textTheme.headline1,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // drawer: Drawer(
-      //   width: MediaQuery.of(context).size.width * 0.8,
-      //   backgroundColor: Colors.white30,
-      //   child: const SideDrawer(),
-      // ),
       appBar: AppBar(
         title: const Text(
           'General Information',
-          style: TextStyle(color: Colors.white,fontSize: 20,fontFamily: 'QuickSand'),
+          style: TextStyle(
+              color: Colors.white, fontSize: 20, fontFamily: 'QuickSand'),
         ),
         backgroundColor: const Color.fromARGB(255, 3, 47, 83),
-        // leading: IconButton(
-        //   onPressed: (() => Navigator.of(context).pop()),
-        //   icon: const Icon(
-        //     Icons.arrow_back,
-        //   ),
-        // ),
-        // iconTheme: IconThemeData(color: const Color.fromARGB(255, 182, 111, 5)),
       ),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            // padding: EdgeInsets.only(top:40),
             children: [
               Text(
                 'Dear Addis Ababa Science and Technology University Students:-',
@@ -45,38 +44,12 @@ class GeneralInfo extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline2,
                 textAlign: TextAlign.center,
               ),
-              ListTile(
-                iconColor: Theme.of(context).iconTheme.color,
-                leading: const Icon(Icons.star),
-                title: Text(
-                  'All courses in his/her Curriculum',
-                  style: Theme.of(context).textTheme.headline1,
-                ),
-              ),
-              ListTile(
-                iconColor: Theme.of(context).iconTheme.color,
-                leading: const Icon(Icons.star),
-                title: Text(
-                  'Academic Status:- detail academic status starting from year 1, semester 1....,',
-                  style: Theme.of(context).textTheme.headline1,
-                ),
-              ),
-              ListTile(
-                iconColor: Theme.of(context).iconTheme.color,
-                leading: const Icon(Icons.star),
-                title: Text(
-                  'Detail about taken courses, exempted courses, waived courses,...',
-                  style: Theme.of(context).textTheme.headline1,
-                ),
-              ),
-              ListTile(
-                iconColor: Theme.of(context).iconTheme.color,
-                leading: const Icon(Icons.star),
-                title: Text(
-                  'Other important information',
-                  style: Theme.of(context).textTheme.headline1,
-                ),
-              ),
+              listTile(context, 'All courses in his/her Curriculum'),
+              listTile(context,
+                  'Academic Status:- detail academic status starting from year 1, semester 1....,'),
+              listTile(context,
+                  'Detail about taken courses, exempted courses, waived courses,...'),
+              listTile(context, 'Other important information'),
             ],
           ),
         ),

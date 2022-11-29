@@ -23,7 +23,7 @@ class Home extends StatelessWidget {
             actions: [
               Image.asset('Assets/Images/AASTU_LOGO.png'),
             ],
-            title:const Text('Home page'),
+            title: const Text('Home page'),
             // backgroundColor: const Color.fromARGB(255, 182, 111, 5),
             iconTheme:
                 const IconThemeData(color: Color.fromARGB(255, 156, 112, 7)),
@@ -31,28 +31,6 @@ class Home extends StatelessWidget {
             pinned: true,
             snap: true,
             expandedHeight: MediaQuery.of(context).size.height * 0.001,
-            // flexibleSpace: FlexibleSpaceBar(
-            //   titlePadding: EdgeInsets.only(
-            //       top: MediaQuery.of(context).size.height * 0.47),
-            //   title: const GridTileBar(
-            //     backgroundColor: Colors.transparent,
-            //     title: Text(
-            //       'AASTU Online Student Information Portal',
-            //       maxLines: 3,
-            //       // overflow: TextOverflow.ellipsis,
-            //       style: TextStyle(
-            //         color: Color.fromARGB(255, 2, 23, 56),
-            //         fontFamily: 'QuickSand',
-            //         fontSize: 17,
-            //       ),
-            //       textAlign: TextAlign.center,
-            //     ),
-            //   ),
-            //   background: Image.asset(
-            //     'Assets/Images/AASTU_LOGO.png',
-            //     fit: BoxFit.cover,
-            //   ),
-            // ),
           ),
           buildData(context),
         ],
@@ -72,8 +50,7 @@ Widget buildData(BuildContext context) => SliverToBoxAdapter(
                 Icons.info,
                 color: Color.fromARGB(255, 2, 23, 56),
               ),
-              () => Navigator.of(context)
-                  .pushNamed(GeneralInfo.routeName),
+              () => Navigator.of(context).pushNamed(GeneralInfo.routeName),
             ),
             Buttonnn(
               'Guideline to LogIn',
@@ -81,8 +58,7 @@ Widget buildData(BuildContext context) => SliverToBoxAdapter(
                 Icons.info,
                 color: Color.fromARGB(255, 2, 23, 56),
               ),
-              () => Navigator.of(context)
-                  .pushNamed(Guidline.routeName),
+              () => Navigator.of(context).pushNamed(Guidline.routeName),
             ),
             Buttonnn(
               'LogIn',
