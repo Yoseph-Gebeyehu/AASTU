@@ -157,14 +157,16 @@ Widget form(
                               content: Text(
                                 '''Wrong user name or password.
 
-Plese check the Guideline section!''',
+Please check the Guideline section!''',
                                 style: Theme.of(context).textTheme.headline1,
                                 // textAlign: TextAlign.center
                               ),
                               title: const Text(
                                 'Error',
                                 style: TextStyle(
-                                    color: Colors.red, fontFamily: 'QuickSand'),
+                                  color: Colors.red,
+                                  fontFamily: 'QuickSand',
+                                ),
                               ),
                               actions: [
                                 TextButton(
@@ -183,9 +185,10 @@ Plese check the Guideline section!''',
                                   child: const Text(
                                     'Cancel',
                                     style: TextStyle(
-                                        color: Colors.orange,
-                                        fontSize: 17,
-                                        fontFamily: 'QuickSand'),
+                                      color: Colors.orange,
+                                      fontSize: 17,
+                                      fontFamily: 'QuickSand',
+                                    ),
                                   ),
                                 ),
                               ],

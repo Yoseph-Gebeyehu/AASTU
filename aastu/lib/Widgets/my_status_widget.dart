@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class MyStatusWidget extends StatelessWidget {
-
   final String accadamicYear;
   final String yearBatch;
   final String semester;
@@ -85,50 +84,56 @@ class MyStatusWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
-        children: [
-          const SizedBox(height: 20),
-          tableOfSemester(context, '1st Semester'),
-          Table(
-            border: TableBorder.all(
-              color: const Color.fromARGB(255, 6, 76, 134),
-              width: 0.2,
+      child: Padding(
+        padding: EdgeInsets.only(
+          left: MediaQuery.of(context).size.width * 0.01,
+          right: MediaQuery.of(context).size.width * 0.01,
+        ),
+        child: Column(
+          children: [
+            const SizedBox(height: 20),
+            tableOfSemester(context, '1st Semester'),
+            Table(
+              border: TableBorder.all(
+                color: const Color.fromARGB(255, 6, 76, 134),
+                width: 0.2,
+              ),
+              children: [
+                tableRow(context, 'Acadamic year', accadamicYear),
+                tableRow(context, 'Year/Batch', yearBatch),
+                tableRow(context, 'Semester', semester),
+                tableRow(context, 'Reg. Date', registraionDate),
+                tableRow(context, 'Remark', remark),
+                tableRow(context, 'Reg. type', registrationType),
+                tableRow(context, 'SGPA', semesterGpa),
+                tableRow(context, 'CGPA', cummulativeGgpa),
+                tableRow(context, 'Prvious Status', previousStatus),
+                tableRow(context, 'Final Status', finalStatus),
+              ],
             ),
-            children: [
-              tableRow(context, 'Acadamic year', accadamicYear),
-              tableRow(context, 'Year/Batch', yearBatch),
-              tableRow(context, 'Semester', semester),
-              tableRow(context, 'Reg. Date', registraionDate),
-              tableRow(context, 'Remark', remark),
-              tableRow(context, 'Reg. type', registrationType),
-              tableRow(context, 'SGPA', semesterGpa),
-              tableRow(context, 'CGPA', cummulativeGgpa),
-              tableRow(context, 'Prvious Status', previousStatus),
-              tableRow(context, 'Final Status', finalStatus),
-            ],
-          ),
-          const SizedBox(height: 50),
-          tableOfSemester(context, '2nd Semester'),
-          Table(
-            border: TableBorder.all(
-              color: const Color.fromARGB(255, 6, 76, 134),
-              width: 0.2,
+            const SizedBox(height: 50),
+            tableOfSemester(context, '2nd Semester'),
+            Table(
+              border: TableBorder.all(
+                color: const Color.fromARGB(255, 6, 76, 134),
+                width: 0.2,
+              ),
+              children: [
+                tableRow(context, 'Acadamic year', accadamicYear),
+                tableRow(context, 'Year/Batch', yearBatch),
+                tableRow(context, 'Semester', semester),
+                tableRow(context, 'Reg. Date', registraionDate),
+                tableRow(context, 'Remark', remark),
+                tableRow(context, 'Reg. type', registrationType),
+                tableRow(context, 'SGPA', semesterGpa),
+                tableRow(context, 'CGPA', cummulativeGgpa),
+                tableRow(context, 'Prvious Status', previousStatus),
+                tableRow(context, 'Final Status', finalStatus),
+              ],
             ),
-            children: [
-              tableRow(context, 'Acadamic year', accadamicYear),
-              tableRow(context, 'Year/Batch', yearBatch),
-              tableRow(context, 'Semester', semester),
-              tableRow(context, 'Reg. Date', registraionDate),
-              tableRow(context, 'Remark', remark),
-              tableRow(context, 'Reg. type', registrationType),
-              tableRow(context, 'SGPA', semesterGpa),
-              tableRow(context, 'CGPA', cummulativeGgpa),
-              tableRow(context, 'Prvious Status', previousStatus),
-              tableRow(context, 'Final Status', finalStatus),
-            ],
-          ),
-          const SizedBox(height: 20),
-        ],
+            const SizedBox(height: 20),
+          ],
+        ),
       ),
     );
   }
