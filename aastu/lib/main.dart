@@ -1,3 +1,4 @@
+import 'package:aastu/Widgets/myGradeTable.dart';
 import 'package:aastu/Screens_after_loggedin/list_of_services.dart';
 import 'package:aastu/Screens_after_loggedin/my_course.dart';
 import 'package:aastu/Screens_after_loggedin/my_dormitory.dart';
@@ -34,7 +35,10 @@ class HomePage extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           backgroundColor: Color.fromARGB(255, 3, 47, 83),
           titleTextStyle: TextStyle(
-              color: Colors.white, fontFamily: 'QuickSand', fontSize: 20),
+            color: Colors.white,
+            fontFamily: 'QuickSand',
+            fontSize: 20,
+          ),
         ),
         iconTheme: const IconThemeData(
           color: Colors.orange,
@@ -62,7 +66,7 @@ class HomePage extends StatelessWidget {
       ),
       routes: {
         Buttonnn.routeName: (context) =>
-            Buttonnn('', Icon(Icons.home), () => null),
+            Buttonnn('', const Icon(Icons.home), () => null),
         SideDrawer.routeName: (context) => SideDrawer(),
         GeneralInfo.routeName: (context) => GeneralInfo(),
         Home.routeName: (context) => Home(),
@@ -75,10 +79,10 @@ class HomePage extends StatelessWidget {
         ThirdYear.routeName: (context) => ThirdYear(),
         FourthYear.routeName: (context) => FourthYear(),
         FifthYear.routeName: (context) => FifthYear(),
-        MyStatus.routeName : (context)=> MyStatus(),
-        MyGrade.routeName : (context)=> MyGrade(),
-        MyDormitory.routeName: (context)=>MyDormitory(),
-        // AlertScreen.routeName: (context) => AlertScreen(),
+        MyStatus.routeName: (context) => MyStatus(),
+        MyGrade.routeName: (context) => MyGrade(),
+        MyDormitory.routeName: (context) => MyDormitory(),
+        TableScreen.routeName: (context) => TableScreen(),
       },
     );
   }

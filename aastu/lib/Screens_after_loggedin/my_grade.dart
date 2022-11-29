@@ -1,3 +1,4 @@
+import 'package:aastu/Widgets/myGradeTable.dart';
 import 'package:flutter/material.dart';
 
 class MyGrade extends StatelessWidget {
@@ -34,192 +35,32 @@ class MyGrade extends StatelessWidget {
                   ),
                 )
               ]),
-          body: Column(children: [
-            Expanded(
-              child: TabBarView(children: [
-                Tab(
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    padding:
-                        EdgeInsets.all(MediaQuery.of(context).size.width * 0.1),
-                    children: [
-                      Text(
-                        '1st Semester',
-                        style: Theme.of(context).textTheme.headline3,
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        'Semster GPA :- 3.85',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      Text(
-                        'Cummulative GPA :- 3.85',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      SizedBox(height: 20),
-                      Text(
-                        '2st Semester',
-                        style: Theme.of(context).textTheme.headline3,
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        'Semster GPA :- 3.54',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      Text(
-                        'Cummulative GPA :- 3.65',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                    ],
-                  ),
+          body: Column(
+            children: const [
+              Expanded(
+                child: TabBarView(
+                  children: [
+                    Tab(
+                      child: TableScreen(),
+                    ),
+                    Tab(
+                      child: TableScreen(),
+                    ),
+                    Tab(
+                      child: TableScreen(),
+                    ),
+                    Tab(
+                      child: TableScreen(),
+                    ),
+                    Tab(
+                      child: TableScreen(),
+                    ),
+                    
+                  ],
                 ),
-                Tab(
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    padding:
-                        EdgeInsets.all(MediaQuery.of(context).size.width * 0.1),
-                    children: [
-                      Text(
-                        '1st Semester',
-                        style: Theme.of(context).textTheme.headline3,
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        'Semster GPA :- 3.85',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      Text(
-                        'Cummulative GPA :- 3.85',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      SizedBox(height: 20),
-                      Text(
-                        '2st Semester',
-                        style: Theme.of(context).textTheme.headline3,
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        'Semster GPA :- 3.54',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      Text(
-                        'Cummulative GPA :- 3.65',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                    ],
-                  ),
-                ),
-                Tab(
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    padding:
-                        EdgeInsets.all(MediaQuery.of(context).size.width * 0.1),
-                    children: [
-                      Text(
-                        '1st Semester',
-                        style: Theme.of(context).textTheme.headline3,
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        'Semster GPA :- 3.85',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      Text(
-                        'Cummulative GPA :- 3.85',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      SizedBox(height: 20),
-                      Text(
-                        '2st Semester',
-                        style: Theme.of(context).textTheme.headline3,
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        'Semster GPA :- 3.54',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      Text(
-                        'Cummulative GPA :- 3.65',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                    ],
-                  ),
-                ),
-                Tab(
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    padding:
-                        EdgeInsets.all(MediaQuery.of(context).size.width * 0.1),
-                    children: [
-                      Text(
-                        '1st Semester',
-                        style: Theme.of(context).textTheme.headline3,
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        'Semster GPA :- 3.85',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      Text(
-                        'Cummulative GPA :- 3.85',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      SizedBox(height: 20),
-                      Text(
-                        '2st Semester',
-                        style: Theme.of(context).textTheme.headline3,
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        'Semster GPA :- 3.54',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      Text(
-                        'Cummulative GPA :- 3.65',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                    ],
-                  ),
-                ),
-                Tab(
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    padding:
-                        EdgeInsets.all(MediaQuery.of(context).size.width * 0.1),
-                    children: [
-                      Text(
-                        '1st Semester',
-                        style: Theme.of(context).textTheme.headline3,
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        'Semster GPA :- 3.85',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      Text(
-                        'Cummulative GPA :- 3.85',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      const SizedBox(height: 20),
-                      Text(
-                        '2st Semester',
-                        style: Theme.of(context).textTheme.headline3,
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        'Semster GPA :- 3.54',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                      Text(
-                        'Cummulative GPA :- 3.65',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                    ],
-                  ),
-                ),
-              ]),
-            )
-          ]),
+              ),
+            ],
+          ),
         ),
       ),
     );
