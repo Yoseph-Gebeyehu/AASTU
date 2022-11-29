@@ -1,9 +1,6 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 class MyStatusWidget extends StatelessWidget {
-  // const MyStatusWidget({Key? key}) : super(key: key);
 
   final String accadamicYear;
   final String yearBatch;
@@ -30,132 +27,106 @@ class MyStatusWidget extends StatelessWidget {
     required this.finalStatus,
   });
 
-// /MyStatusWidget
+  TableRow tableRow(BuildContext context, String text1, text2) {
+    return TableRow(
+      children: [
+        Padding(
+          padding: EdgeInsets.only(
+            top: MediaQuery.of(context).size.height * 0.02,
+            bottom: MediaQuery.of(context).size.height * 0.01,
+          ),
+          child: Text(
+            text1,
+            style: Theme.of(context).textTheme.headline1,
+            textAlign: TextAlign.center,
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+            top: MediaQuery.of(context).size.height * 0.02,
+            bottom: MediaQuery.of(context).size.height * 0.01,
+          ),
+          child: Text(
+            text2,
+            style: Theme.of(context).textTheme.headline1,
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget tableOfSemester(BuildContext context, String text) {
+    return Table(
+      border: TableBorder.all(
+        color: const Color.fromARGB(255, 6, 76, 134),
+        width: 0.2,
+      ),
+      children: [
+        TableRow(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.02,
+                bottom: MediaQuery.of(context).size.height * 0.01,
+              ),
+              child: Text(
+                text,
+                style: Theme.of(context).textTheme.headline2,
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 20),
-          Center(
-            child: Text(
-              '1st Semster',
-              style: Theme.of(context).textTheme.headline3,
-              textAlign: TextAlign.center,
+          tableOfSemester(context, '1st Semester'),
+          Table(
+            border: TableBorder.all(
+              color: const Color.fromARGB(255, 6, 76, 134),
+              width: 0.2,
             ),
+            children: [
+              tableRow(context, 'Acadamic year', accadamicYear),
+              tableRow(context, 'Year/Batch', yearBatch),
+              tableRow(context, 'Semester', semester),
+              tableRow(context, 'Reg. Date', registraionDate),
+              tableRow(context, 'Remark', remark),
+              tableRow(context, 'Reg. type', registrationType),
+              tableRow(context, 'SGPA', semesterGpa),
+              tableRow(context, 'CGPA', cummulativeGgpa),
+              tableRow(context, 'Prvious Status', previousStatus),
+              tableRow(context, 'Final Status', finalStatus),
+            ],
           ),
-          const Divider(),
-          Text(
-            'Acadamic year:- $accadamicYear',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Year/Batch:- $yearBatch',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Semester:- $semester',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Registration Date:- $registraionDate',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Remark:- $remark',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Registraion type:- $registrationType',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Semster GPA:- $semesterGpa',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Commulative GPA:- $cummulativeGgpa',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Prvious Status:- $previousStatus',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Final Status:- $finalStatus',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          const SizedBox(height: 20),
-          Center(
-            child: Text(
-              '2nd Semster',
-              style: Theme.of(context).textTheme.headline3,
-              textAlign: TextAlign.center,
+          const SizedBox(height: 50),
+          tableOfSemester(context, '2nd Semester'),
+          Table(
+            border: TableBorder.all(
+              color: const Color.fromARGB(255, 6, 76, 134),
+              width: 0.2,
             ),
+            children: [
+              tableRow(context, 'Acadamic year', accadamicYear),
+              tableRow(context, 'Year/Batch', yearBatch),
+              tableRow(context, 'Semester', semester),
+              tableRow(context, 'Reg. Date', registraionDate),
+              tableRow(context, 'Remark', remark),
+              tableRow(context, 'Reg. type', registrationType),
+              tableRow(context, 'SGPA', semesterGpa),
+              tableRow(context, 'CGPA', cummulativeGgpa),
+              tableRow(context, 'Prvious Status', previousStatus),
+              tableRow(context, 'Final Status', finalStatus),
+            ],
           ),
-          const Divider(),
-          Text(
-            'Acadamic year:- $accadamicYear',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Year/Batch:- $yearBatch',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Semester:- $semester',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Registration Date:- $registraionDate',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Remark:- $remark',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Registraion type:- $registrationType',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Semster GPA:- $semesterGpa',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Commulative GPA:- $cummulativeGgpa',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Prvious Status:- $previousStatus',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
-          Text(
-            'Final Status:- $finalStatus',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          const Divider(),
           const SizedBox(height: 20),
         ],
       ),

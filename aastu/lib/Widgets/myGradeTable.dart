@@ -4,6 +4,34 @@ class TableScreen extends StatelessWidget {
   const TableScreen({Key? key}) : super(key: key);
   static const routeName = '/table-screen';
 
+  Widget padding(BuildContext context, String text) {
+    return Padding(
+      padding: EdgeInsets.only(
+        top: MediaQuery.of(context).size.height * 0.015,
+        bottom: MediaQuery.of(context).size.height * 0.005,
+      ),
+      child: Text(
+        text,
+        style: Theme.of(context).textTheme.headline1,
+        textAlign: TextAlign.center,
+      ),
+    );
+  }
+
+  Widget paddingOfSemester(BuildContext context, String text) {
+    return Padding(
+      padding: EdgeInsets.only(
+        top: MediaQuery.of(context).size.height * 0.02,
+        bottom: MediaQuery.of(context).size.height * 0.01,
+      ),
+      child: Text(
+        text,
+        style: Theme.of(context).textTheme.headline2,
+        textAlign: TextAlign.center,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -19,89 +47,31 @@ class TableScreen extends StatelessWidget {
             border: TableBorder.all(
               color: const Color.fromARGB(255, 6, 76, 134),
               width: 0.2,
-
-              // borderRadius: BorderRadius.circular(15),
-            ),
-            children: [
-              TableRow(children: [
-                Padding(
-                  padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.02,
-                    bottom: MediaQuery.of(context).size.height * 0.01,
-                  ),
-                  child: Text(
-                    '1st Semester',
-                    style: Theme.of(context).textTheme.headline2,
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ]),
-            ],
-          ),
-          // Text(
-          //   '1st Semester',
-          //   style: Theme.of(context).textTheme.headline1,
-          //   textAlign: TextAlign.center,
-          // ),
-          Table(
-            // columnWidths: {1:TableColumnWidth.,},
-
-            border: TableBorder.all(
-              color: const Color.fromARGB(255, 6, 76, 134),
-              width: 0.2,
-              // borderRadius: BorderRadius.circular(15),
             ),
             children: [
               TableRow(
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * 0.015,
-                      bottom: MediaQuery.of(context).size.height * 0.005,
-                    ),
-                    child: Text(
-                      'SGPA',
-                      style: Theme.of(context).textTheme.headline1,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * 0.015,
-                      bottom: MediaQuery.of(context).size.height * 0.005,
-                    ),
-                    child: Text(
-                      '3.5',
-                      style: Theme.of(context).textTheme.headline1,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
+                  padding(context, '1st Semester'),
+                ],
+              ),
+            ],
+          ),
+          Table(
+            border: TableBorder.all(
+              color: const Color.fromARGB(255, 6, 76, 134),
+              width: 0.2,
+            ),
+            children: [
+              TableRow(
+                children: [
+                  padding(context, 'SGPA'),
+                  padding(context, '3.5'),
                 ],
               ),
               TableRow(
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * 0.015,
-                      bottom: MediaQuery.of(context).size.height * 0.005,
-                    ),
-                    child: Text(
-                      'SGPA',
-                      style: Theme.of(context).textTheme.headline1,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * 0.015,
-                      bottom: MediaQuery.of(context).size.height * 0.005,
-                    ),
-                    child: Text(
-                      '3.5',
-                      style: Theme.of(context).textTheme.headline1,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
+                  padding(context, 'CPGA'),
+                  padding(context, '3.5'),
                 ],
               ),
             ],
@@ -113,85 +83,29 @@ class TableScreen extends StatelessWidget {
             border: TableBorder.all(
               color: const Color.fromARGB(255, 6, 76, 134),
               width: 0.2,
-
-              // borderRadius: BorderRadius.circular(15),
             ),
             children: [
               TableRow(children: [
-                Padding(
-                  padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.02,
-                    bottom: MediaQuery.of(context).size.height * 0.01,
-                  ),
-                  child: Text(
-                    '2nd Semester',
-                    style: Theme.of(context).textTheme.headline2,
-                    textAlign: TextAlign.center,
-                  ),
-                ),
+                padding(context, '2nd Semester'),
               ]),
             ],
           ),
-
           Table(
-            // columnWidths: {1:TableColumnWidth.,},
-
             border: TableBorder.all(
               color: const Color.fromARGB(255, 6, 76, 134),
               width: 0.2,
-              // borderRadius: BorderRadius.circular(15),
             ),
             children: [
               TableRow(
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * 0.015,
-                      bottom: MediaQuery.of(context).size.height * 0.005,
-                    ),
-                    child: Text(
-                      'SGPA',
-                      style: Theme.of(context).textTheme.headline1,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * 0.015,
-                      bottom: MediaQuery.of(context).size.height * 0.005,
-                    ),
-                    child: Text(
-                      '3.5',
-                      style: Theme.of(context).textTheme.headline1,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
+                  padding(context, 'SPGA'),
+                  padding(context, '3.6'),
                 ],
               ),
               TableRow(
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * 0.015,
-                      bottom: MediaQuery.of(context).size.height * 0.005,
-                    ),
-                    child: Text(
-                      'SGPA',
-                      style: Theme.of(context).textTheme.headline1,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * 0.015,
-                      bottom: MediaQuery.of(context).size.height * 0.005,
-                    ),
-                    child: Text(
-                      '3.5',
-                      style: Theme.of(context).textTheme.headline1,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
+                  padding(context, 'CGPA'),
+                  padding(context, '3.3'),
                 ],
               ),
             ],

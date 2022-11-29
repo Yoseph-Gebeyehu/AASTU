@@ -34,7 +34,7 @@ Student Information Portal''',
               ),
             ),
             background: Image.asset(
-              'Assets/Images/AASTU_LOGO.png',
+              'Assets/Images/AASTU Logo 2.jpg',
               fit: BoxFit.cover,
             ),
           ),
