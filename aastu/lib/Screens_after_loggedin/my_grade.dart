@@ -1,9 +1,14 @@
 import 'package:aastu/Widgets/myGradeTable.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../provider/all_courses.dart';
 
 class MyGrade extends StatelessWidget {
   static const routeName = '/my-grade';
   Widget build(BuildContext context) {
+    final pic = Provider.of<AllCourses>(context, listen: false);
+
     return DefaultTabController(
       length: 5,
       child: Scaffold(
@@ -36,26 +41,50 @@ class MyGrade extends StatelessWidget {
                 )
               ]),
           body: Column(
-            children: const [
+            children: [
               Expanded(
                 child: TabBarView(
                   children: [
                     Tab(
-                      child: TableScreen(),
+                      child: TableScreen(
+                        pic.firstYr1stSemester,
+                        pic.firstYr2ndSemester,
+                        // pic.gpa1stYr1stSemster,
+                        // pic.gpa1stYr2ndSemster,
+                      ),
                     ),
                     Tab(
-                      child: TableScreen(),
+                      child: TableScreen(
+                        pic.secondYr1stSemester,
+                        pic.secondYr1stSemester,
+                        // pic.gpa1stYr1stSemster,
+                        // pic.gpa1stYr2ndSemster,
+                      ),
                     ),
                     Tab(
-                      child: TableScreen(),
+                      child: TableScreen(
+                        pic.secondYr1stSemester,
+                        pic.secondYr1stSemester,
+                        // pic.gpa1stYr1stSemster,
+                        // pic.gpa1stYr2ndSemster,
+                      ),
                     ),
                     Tab(
-                      child: TableScreen(),
+                      child: TableScreen(
+                        pic.secondYr1stSemester,
+                        pic.secondYr1stSemester,
+                        // pic.gpa1stYr1stSemster,
+                        // pic.gpa1stYr2ndSemster,
+                      ),
                     ),
                     Tab(
-                      child: TableScreen(),
+                      child: TableScreen(
+                        pic.secondYr1stSemester,
+                        pic.secondYr1stSemester,
+                        // pic.gpa1stYr1stSemster,
+                        // pic.gpa1stYr2ndSemster,
+                      ),
                     ),
-                    
                   ],
                 ),
               ),
